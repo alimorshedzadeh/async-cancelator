@@ -163,28 +163,6 @@ function useFetchData(url) {
 }
 ```
 
-## Automated Publishing
-
-This package uses GitHub Actions to automatically publish to npm when a new release is created. To set this up:
-
-1. Create an npm access token:
-   - Go to your npm account settings
-   - Select "Access Tokens"
-   - Create a new token with "Automation" type
-
-2. Add the token to your GitHub repository:
-   - Go to your GitHub repository settings
-   - Select "Secrets and variables" → "Actions"
-   - Create a new repository secret named `NPM_TOKEN` with your npm token as the value
-
-3. Create a new release on GitHub:
-   - Go to the "Releases" section of your repository
-   - Click "Create a new release"
-   - Tag the version (e.g., v0.1.0)
-   - Publish the release
-
-The GitHub Actions workflow will automatically build, test, and publish your package to npm.
-
 ## API Reference
 
 ### `createCancellable(fn)`

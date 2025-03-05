@@ -5,16 +5,29 @@
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "files": [
-        "dist"
+        "dist",
+        "!dist/**/*.test.*"
     ],
+    "sideEffects": false,
     "scripts": {
-        "build": "tsc",
+        "build": "tsc && npm run minify",
         "test": "node test.js",
         "prepublishOnly": "npm run build",
+        "release:patch": "npm version patch && git push && git push --tags",
+        "release:minor": "npm version minor && git push && git push --tags",
+        "release:major": "npm version major && git push && git push --tags",
         "lint": "echo \"No linting configured\"",
         "clean": "rm -rf dist",
-        "prebuild": "npm run clean"
+        "prebuild": "npm run clean",
+        "analyze": "npx bundlesize",
+        "minify": "terser dist/**/*.js --compress --mangle --output dist/"
     },
+    "bundlesize": [
+        {
+            "path": "./dist/**/*.js",
+            "maxSize": "5 kB"
+        }
+    ],
     "keywords": [
         "promise",
         "async",
@@ -41,6 +54,7 @@
     },
     "devDependencies": {
         "@types/node": "^22.13.9",
+        "terser": "^5.39.0",
         "typescript": "^5.8.2"
     }
 }
