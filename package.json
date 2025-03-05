@@ -1,6 +1,6 @@
 {
     "name": "async-cancelator",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "A minimal async control and cancellation library for JavaScript and TypeScript",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -11,9 +11,6 @@
         "build": "tsc",
         "test": "node test.js",
         "prepublishOnly": "npm run build",
-        "release:patch": "npm version patch && git push && git push --tags",
-        "release:minor": "npm version minor && git push && git push --tags",
-        "release:major": "npm version major && git push && git push --tags",
         "lint": "echo \"No linting configured\"",
         "clean": "rm -rf dist",
         "prebuild": "npm run clean"
