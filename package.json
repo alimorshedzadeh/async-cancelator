@@ -1,0 +1,46 @@
+{
+    "name": "async-cancelator",
+    "version": "0.1.0",
+    "description": "A minimal async control and cancellation library for JavaScript and TypeScript",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "test": "node test.js",
+        "prepublishOnly": "npm run build",
+        "lint": "echo \"No linting configured\"",
+        "clean": "rm -rf dist",
+        "prebuild": "npm run clean"
+    },
+    "keywords": [
+        "promise",
+        "async",
+        "cancellation",
+        "cancelation",
+        "timeout",
+        "control",
+        "react",
+        "nodejs",
+        "browser"
+    ],
+    "author": "Your Name",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/yourusername/async-cancelator.git"
+    },
+    "bugs": {
+        "url": "https://github.com/yourusername/async-cancelator/issues"
+    },
+    "homepage": "https://github.com/yourusername/async-cancelator#readme",
+    "engines": {
+        "node": ">=12.0.0"
+    },
+    "devDependencies": {
+        "@types/node": "^22.13.9",
+        "typescript": "^5.8.2"
+    }
+}
