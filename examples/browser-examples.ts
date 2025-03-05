@@ -7,7 +7,7 @@ import {
   createCancellableWithTimeoutAndReject,
   CancellationError,
   TimeoutError
-} from './index';
+} from '../src';
 
 /**
  * Example 1: Basic Cancellable Promise

@@ -11,7 +11,7 @@ import {
   createCancellableWithTimeoutAndReject,
   CancellationError,
   TimeoutError
-} from './index';
+} from '../src';
 
 /**
  * Example 1: Cancellable file read

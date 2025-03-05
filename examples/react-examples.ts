@@ -14,7 +14,7 @@ import {
   createCancellableWithTimeoutAndReject, 
   CancellationError, 
   TimeoutError 
-} from './index';
+} from '../src';
 
 // The rest of the file is kept as a reference implementation
 // but commented out to avoid TypeScript errors during build
