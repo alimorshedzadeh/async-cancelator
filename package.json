@@ -1,6 +1,6 @@
 {
     "name": "async-cancelator",
-    "version": "1.0.3",
+    "version": "1.1.0",
     "description": "A minimal async control and cancellation library for JavaScript and TypeScript",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -22,10 +22,12 @@
         "analyze": "npx bundlesize",
         "minify": "find dist -name '*.js' -exec terser {} --compress --mangle --output {} \\;"
     },
-    "bundlesize": [{
-        "path": "./dist/**/*.js",
-        "maxSize": "5 kB"
-    }],
+    "bundlesize": [
+        {
+            "path": "./dist/**/*.js",
+            "maxSize": "5 kB"
+        }
+    ],
     "keywords": [
         "promise",
         "async",
